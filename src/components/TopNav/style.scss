@@ -1,0 +1,178 @@
+$containerHeight: 60px;
+.top-nav {
+  height: $containerHeight;
+  background-color: #5A8BFF;
+  color: #fff;
+  position: relative;
+  .logo {
+    font-size: 16px;
+    position: absolute;
+    line-height: 1;
+    width: 214px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    line-height: $containerHeight;
+    background: url('../../common/images/logo.png') no-repeat scroll 29px center;
+    .dot {
+      margin: 0 3px 0 127px;
+    }
+  }
+  .nav-list {
+    text-align: right;
+    padding-right: 80px;
+    position: relative;
+    .user-info {
+      display: inline-block;
+      position: absolute;
+      height: $containerHeight;
+      line-height: $containerHeight;
+      margin-left: 18px;
+      .avatar-icon {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #fff;
+      }
+      .avatar-img {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        border-radius: 50%;
+        line-height: 30px;
+        position: relative;
+        top: 10px;
+        & > img {
+          width: 100%;
+        }
+      }
+      &:hover {
+        .user-menu {
+          display: block;
+        }
+      }
+      .user-menu {
+        display: none;
+        z-index: 10;
+        position: absolute;
+        background: #FFFFFF;
+        box-shadow: 0 2px 8px 0 rgba(105, 124, 239, 0.4);
+        border-radius: 4px;
+        width: 120px;
+        text-align: center;
+        padding: 9px 0px;
+        line-height: 1.5;
+        left: -50px;
+        .user-sub-li {
+          & > a {
+            font-size: 14px;
+            color: #50596F;
+            display: inline-block;
+            width: 100%;
+            padding: 6px 0;
+            &:hover {
+              color: #5A8BFF;
+            }
+          }
+        }
+      }
+    }
+    .nav-ul {
+      display: inline-block;
+      .nav-li {
+        display: inline-block;
+        & > a {
+          color: #fff;
+          height: $containerHeight;
+          line-height: $containerHeight;
+          display: inline-block;
+          padding: 0 10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .dynamic-nav-menus {
+    position: absolute;
+    left: 214px;
+    margin-left: 10px;
+    top: 8px;
+    .ant-menu-horizontal{
+      border-bottom: 0 none;
+      background-color: transparent;
+      .ant-menu-submenu {
+        border-bottom: 0 none;
+        background-color: transparent;
+        color: #fff;
+        .ant-menu-submenu-title {
+          padding: 0 12px;
+          .submenu-span {
+            & > .icon.icon-triangle-down {
+              font-size: 12px;
+              margin: 0 2px;
+            }
+          }
+          a {
+            color: #fff;
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+        .ant-menu-vertical {
+          padding: 8px 0;
+          .ant-menu-item {
+            color: #50596F;
+            line-height: 34px;
+            height: 34px;
+            padding: 0 32px;
+            font-size: 14px;
+            &:hover {
+              color: #5A8BFF;
+              background-color: transparent;
+            }
+            a {
+              color: #50596F;
+              &:hover {
+                color: #5A8BFF;
+              }
+            }
+          }
+        }
+      }
+      .ant-menu-item {
+        border-bottom: 0 none;
+        color: #fff;
+        padding: 0 12px;
+        a {
+          color: #fff;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .top-nav {
+    .logo {
+      background-image: url('../../common/images/logo@2x.png');
+      background-size: 97px auto;
+      background-position: 30px center;
+      .dot {
+        margin-left: 135px;
+      }
+    }
+  }
+}

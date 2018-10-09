@@ -1,0 +1,16 @@
+@import './antd.scss';
+@import './reset.scss';
+
+html, body {
+  color: #7C89A7;
+  background-color: #F2F6FF !important;
+}
+body {
+  font-size: 14px !important; // no html setup, since mobile h5 is go crash
+}
+.fn-hide {
+  display: none !important;
+}
+.border-box {
+  box-sizing: border-box;
+}

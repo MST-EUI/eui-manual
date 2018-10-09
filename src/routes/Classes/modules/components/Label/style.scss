@@ -1,0 +1,27 @@
+.label-wrapper {
+  > .label-name {
+    display: inline-block;
+    text-align: right;
+    margin-right: 32px;
+    vertical-align: middle;
+    padding: 8px 0;
+    line-height: 1;
+    color: #50596F;
+    font-size: 14px;
+
+    &.required {
+      &:before {
+        content: '*';
+        color: #FF7D66;
+      }
+    }
+  }
+
+  > .label-content {
+    display: inline-block;
+    color: #373A44;
+    font-size:14px;
+    line-height: 30px;
+    vertical-align: top;
+  }
+}

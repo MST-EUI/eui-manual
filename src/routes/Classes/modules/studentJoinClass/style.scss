@@ -1,0 +1,186 @@
+$pacMainColor: #5A8BFF;
+.page-join-class {
+  .red-star {
+    color: #FF7D66;
+    margin-right: 2px;
+  }
+  .box {
+    padding: 0 0 30px 0;
+    .title {
+      font-size: 22px;
+      color: #373A44;
+      margin-bottom: 20px;
+    }
+    .class-list {
+      min-height: 500px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 8px 0 rgba(90,139,255,0.12);
+      border-radius: 2px;
+      padding: 20px 30px 30px;
+      .tips-for-all {
+        border: 1px solid #E4E9F4;
+        margin-bottom: 25px;
+        padding: 20px;
+        .tip-tag {
+          margin-bottom: 9px;
+        }
+        .tip-paragraph {
+          font-size: 12px;
+          color: #96A2BE;
+        }
+      }
+      .school-detail {
+        color: #50596F;
+        margin-bottom: 25px;
+      }
+      .class-ul {
+        margin-left: -25px;
+        .class-li {
+          display: inline-block;
+          border: 1px solid #E4E9F4;
+          border-radius: 4px;
+          padding: 0 8px;
+          text-align: center;
+          cursor: pointer;
+          overflow: hidden;
+          margin-left: 25px;
+          margin-bottom: 25px;
+          outline: 0 none;
+          &.current {
+            color: $pacMainColor;
+            border-color: $pacMainColor;
+          }
+          & > div {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+      .no-data {
+        font-size: 12px;
+        color: #C3C8D8;
+        text-align: center;
+        padding: 70px 0;
+        line-height: 30px;
+        .tel {
+          color: $pacMainColor;
+          padding: 0 5px;
+        }
+      }
+      .search-box {
+        position: relative;
+        margin-bottom: 30px;
+        .search-input-box {
+          width: 420px;
+          padding: 9px;
+          border: 1px solid #E6EAF5;
+          border-radius: 4px;
+          &.focus-style {
+            border-color:#5A8BFF;
+          }
+          .search-icon {
+            vertical-align: middle;
+            margin-right: 2px;
+            color: $pacMainColor;
+            font-size: 18px;
+          }
+          .clear-icon {
+            vertical-align: middle;
+            margin-left: 10px;
+            color: #AEC7FF;
+            cursor: pointer;
+            outline: 0 none;
+          }
+          .key-input {
+            color: #50596F;
+            border: 0 none;
+            width: 350px;
+          }
+        }
+      }
+      .search-result {
+        position: absolute;
+        width: 420px;
+        background: #FFFFFF;
+        box-shadow: 0 2px 8px 0 rgba(105,124,239,0.40);
+        border-radius: 4px;
+        line-height: 34px;
+        .list {
+          max-height: 175px;
+          overflow: auto;
+          & > li {
+            outline: 0 none;
+            cursor: pointer;
+            color: #50596F;
+            line-height: 1.5;
+            .li-inner {
+              padding: 7px 12px;
+            }
+            &:hover {
+              background-color: #F2F6FF;
+              color: $pacMainColor;
+              .address-info {
+                color: #50596F;
+              }
+            }
+            .school-name {
+              display: inline-block;
+              width: 40%;
+            }
+            .address-info {
+              display: inline-block;
+              width: 60%;
+              text-align: right;
+              & > span {
+                margin-left: 3px;
+                &:first-child {
+                  margin-left: 0px;
+                }
+              }
+            }
+          }
+        }
+        .footer {
+          margin: 0 12px;
+          border-top: 1px solid #E4E9F4;
+          .tel {
+            color: $pacMainColor;
+            margin-left: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+.question-line {
+  margin-bottom: 20px;
+  .question {
+    color: #200000;
+    margin-bottom: 10px;
+  }
+  .input-block {
+    border: 1px solid #E6EAF5;
+    border-radius: 4px;
+    padding: 5px 8px;
+    .input {
+      font-size: 12px;
+      width: 100%;
+      border: 0 none;
+    }
+  }
+  .error-tips {
+    font-size: 12px;
+    color: #FF7D66;
+    margin-top: 2px;
+  }
+}
+.join-class-warning-modal {
+  .classes {
+    color: $pacMainColor;
+    padding: 0 3px;
+  }
+}

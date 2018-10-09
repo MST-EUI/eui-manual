@@ -1,0 +1,84 @@
+.left-nav {
+    padding-top: 25px;
+    .part-top {
+        text-align: center;
+        .logo {
+        }
+        .title {
+            color: #7C89A7;
+            margin-top: 10px;
+        }
+        margin-bottom: 30px;
+    }
+    .part-menu-items {
+        font-size: 14px;
+        li {
+            border-left: 4px solid #fff;
+            line-height: 46px;
+            a {
+                padding-left: 26px;
+                color: #7C89A7;
+                display: block;
+                cursor: pointer;
+                width: 100%;
+                overflow: hidden;
+                height: 46px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                padding-right: 10px;
+                &:hover {
+                    color: #4B77E3;
+                    background: #F2F6FF;
+                }
+            }
+            &:hover {
+              border-left-color: #F2F6FF;
+            }
+            &.current:hover {
+              border-left-color: #4B77E3;
+            }
+        }
+        .current {
+            background: #F2F6FF;;
+            border-left-color:#4B77E3;
+            a {
+                color: #5A8BFF;
+            }
+        }
+        .with-submenus {
+            border-left: 0 none;
+            .click-button {
+                cursor: pointer;
+                padding-left: 30px;
+                outline: 0 none;
+                height: 46px;
+                line-height: 46px;
+                color: #7C89A7;
+                & > span {
+                  display: inline-block;
+                  max-width: 155px;
+                  height: 100%;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+                .icon {
+                  font-size: 12px;
+                  margin-left: 4px;
+                }
+            }
+            ul{
+                li {
+                    text-indent: 20px;
+                }
+                .current {
+                    background: #F2F6FF;
+                    border-left: 4px solid #4B77E3;
+                    a {
+                        color: #5A8BFF;
+                    }
+                }
+            }
+        }
+    }
+}

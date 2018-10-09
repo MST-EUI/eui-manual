@@ -1,0 +1,68 @@
+.create-class-modal-wrapper {
+  .create-class-body-wrapper {
+    > .label-wrapper {
+      margin-top: 28px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .label-content {
+        .ant-radio-group {
+          .ant-radio-wrapper {
+            margin-right: 40px;
+
+            .ant-radio-inner {
+              border-color: #5A8BFF;
+
+              &:after {
+                background-color: #5A8BFF;
+                width: 8px;
+                height: 8px;
+                left: 2px;
+                top: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content {
+      color: #373A44;
+      font-size: 14px;
+
+      .class-num-input {
+        display: inline-block;
+        width: 100px;
+        margin: 0 8px;
+      }
+
+      .classname-input {
+        display: inline-block;
+        width: 300px;
+        margin-right: 8px;
+      }
+    }
+
+    .content-prompt {
+      color: #96A2BE;
+      font-size: 12px;
+      line-height: 20px;
+      max-width: 540px;
+
+      > .phone-num {
+        color: #5A8BFF;
+        margin-left: 4px;
+      }
+    }
+
+    .error-prompt {
+      color: #FF7D66;
+      font-size: 12px;
+    }
+  }
+
+  .ant-modal-footer button + button {
+    margin-left: 24px;
+  }
+}

@@ -1,0 +1,28 @@
+.create-class__modal{
+
+  .create-class__tips{
+    font-size:12px;
+    color:rgba(150,162,190,1);
+    line-height:22px;
+  }
+  .class-no__wrapper{
+    .class-no__inner{
+      display: inline-block;
+      width: 100px;
+    }
+  }
+  .ant-form-item-label{
+    label{
+      font-size: 14px;
+      &:after{
+        content: '';
+      }
+      &:before{
+        content: '';
+      }
+    }
+  }
+  .ant-form-text{
+    font-size: 14px;
+  }
+}

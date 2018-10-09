@@ -1,0 +1,350 @@
+$primary-color: #5a8bff;
+.overview-container {
+  padding: 24px 32px 24px 32px;
+  & > div > .ant-alert {
+    margin-bottom: 16px;
+    font-size: 14px;
+    .warning-message {
+      color: rgb(201, 167, 139);
+      & > a {
+        color: $primary-color;
+      }
+    }
+  }
+  .page-warning {
+    display: none;
+  }
+  .common-border-radius {
+    border-radius: 2px;
+  }
+  .part-top {
+    height: 206px;
+    overflow: hidden;
+    .teacher-info-panel {
+      padding: 32px 24px;
+      width: 434px;
+      height: 100%;
+      float: left;
+      background-color: #fff;
+      @extend .common-border-radius;
+      .avatar {
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+        .avatar-img-container {
+          width: 40px;
+          height: 100%;
+          display: inline-block;
+          overflow: hidden;
+          margin-right: 10px;
+          border-radius: 50%;
+          & > img {
+            width: 100%;
+          }
+        }
+        .update-name-icon {
+          color: #95B4FF;
+          cursor: pointer;
+        }
+        .name, .hi-text, .info-icon, .btn {
+          display: inline-block;
+          height: 100%;
+          vertical-align: top;
+        }
+        .name {
+          max-width: 135px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .info-icon {
+          margin: 0 18px 0 8px;
+        }
+        .btn {
+          position: absolute;
+          right: 0;
+          top: -1px;
+        }
+      }
+    }
+    .data-report {
+      margin-top: 35px;
+      .report-of-psychological-test::after {
+        content: '';
+        width: 2px;
+        background-color: #E5E5E5;
+        height: 60px;
+        position: absolute;
+        top: 9px;
+        right: -1px;
+      }
+      .two-column-report {
+        position: relative;
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        .number, .description {
+          display: inline-block;
+          width: 100%;
+        }
+        .number {
+          & > a {
+            color: $primary-color;
+          }
+          font-size: 20px;
+          margin-bottom: 18px;
+          font-weight: bold;
+          .no-auth-no-data {
+            color: #E6EAF5;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .banner {
+      width: 268px;
+      height: 100%;
+      margin-left: 16px;
+      float: left;
+      position: relative;
+      @extend .common-border-radius;
+      .ad-banner-a {
+        display: inline-block;
+        font-size: 0;
+      }
+      .banner-img {
+        width: 100%;
+      }
+      .banner-wait-for-suprise {
+        font-size: 0;
+      }
+    }
+  }
+  .part-middle {
+    overflow: hidden;
+    margin-top: 24px;
+    position: relative;
+  }
+  .newest-homework {
+    padding-right: 268px;
+    @extend .common-border-radius;
+    .bg-container {
+      background-color: #fff;
+      padding: 32px;
+      min-height: 600px;
+      margin-right: 16px;
+      @extend .common-border-radius;
+    }
+    .list-item:last-child {
+      border-bottom: 0 none;
+    }
+    .list-item .col-span {
+      width: 27%;
+    }
+    .list-item .col-span:first-child {
+      width: 46%;
+    }
+    .title {
+      position: relative;
+      margin-bottom: 12px;
+      .text {
+        font-size: 18px;
+      }
+      .more {
+        position: absolute;
+        right: 0;
+        top: 4px;
+        color: $primary-color;
+      }
+    }
+  }
+  .student-dynamic-state {
+    background-color: #fff;
+    padding: 32px 24px;
+    width: 268px;
+    min-height: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @extend .common-border-radius;
+    .title {
+      position: relative;
+      margin-bottom: 32px;
+      .text {
+        font-size: 16px;
+      }
+    }
+    .student-state-list {
+      .color-gray {
+        color: #96A2BE;
+      }
+      .state-ul {
+        .state-li {
+          height: 32px;
+          position: relative;
+          padding-left: 40px;
+          font-size: 12px;
+          margin-bottom: 24px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .avatar {
+            width: 32px;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            & > img {
+              width: 100%;
+            }
+          }
+          .time {
+            @extend .color-gray;
+          }
+          .detail-info {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            color: #373A44;
+            .play {
+              @extend .color-gray;
+              margin: 0 10px 0 8px;
+            }
+            .user-name {
+              width: 40px;
+              display: inline-block;
+              height: 14px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              vertical-align: top;
+            }
+            .video-title {
+              display: inline-block;
+              width: 84px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              height: 14px;
+              white-space: nowrap;
+              vertical-align: top;
+              line-height: 14px;
+              position: relative;
+              top: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.update-teacher-name-modal {
+  .error-tips {
+    font-size: 12px;
+    color: #FF7D66;
+    margin-top: 8px;
+  }
+  .ant-input {
+    height: 32px;
+    font-size: 14px;
+  }
+}
+.bend-form-item {
+  margin-bottom: 26px;
+}
+.bend-form-item-with-help {
+  margin-bottom: 0;
+}
+.change-name-popover {
+  z-index: 999 !important;
+  .ant-popover-inner-content {
+    padding: 16px;
+  }
+  .teacher-name-update {
+    color: #96A2BE;
+    .change-name-description {
+      .main-color-text {
+        color: $primary-color;
+      }
+    }
+    .buttons-grop {
+      text-align: right;
+      font-size: 14px;
+      margin-top: 14px;
+      .text-btn {
+        display: inline-block;
+        cursor: pointer;
+      }
+      .text-btn + .text-btn {
+        margin-left: 40px;
+      }
+      .text-btn-primary {
+        color: $primary-color;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1920px) {
+  .overview-container {
+    .part-top {
+      .teacher-info-panel {
+        width: 406px;
+      }
+    }
+    .part-middle {
+      .newest-homework {
+        padding-right: 350px;
+      }
+      .student-dynamic-state {
+        width: 350px;
+        .student-state-list .state-ul .state-li .detail-info .video-title {
+          width: 160px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .overview-container {
+    .part-top {
+      .teacher-info-panel {
+        width: 434px;
+      }
+    }
+    .part-middle {
+      .newest-homework {
+        padding-right: 268px;
+      }
+      .student-dynamic-state {
+        width: 268px;
+        .student-state-list .state-ul .state-li .detail-info .video-title {
+          width: 84px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .overview-container {
+    .part-top {
+      .teacher-info-panel {
+        width: 434px;
+      }
+    }
+    .part-middle {
+      .newest-homework {
+        padding-right: 268px;
+      }
+      .student-dynamic-state {
+        width: 268px;
+        .student-state-list .state-ul .state-li .detail-info .video-title {
+          width: 84px;
+        }
+      }
+    }
+  }
+}

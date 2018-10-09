@@ -1,0 +1,46 @@
+.rename-class-modal-wrapper {
+  .rename-class-body-wrapper {
+    > .label-wrapper {
+      margin-top: 28px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    .content {
+      color: #373A44;
+      font-size: 14px;
+
+      .class-no-input {
+        display: inline-block;
+        width: 100px;
+        margin: 0 8px;
+      }
+
+      .classname-input {
+        display: inline-block;
+        width: 180px;
+        margin-right: 8px;
+      }
+    }
+
+    .content-prompt {
+      color: #96A2BE;
+      font-size: 12px;
+
+      > .phone-num {
+        color: #5A8BFF;
+        margin-left: 4px;
+      }
+    }
+
+    .error-prompt {
+      color: #FF7D66;
+      font-size: 12px;
+    }
+  }
+
+  .ant-modal-footer button + button {
+    margin-left: 24px;
+  }
+}

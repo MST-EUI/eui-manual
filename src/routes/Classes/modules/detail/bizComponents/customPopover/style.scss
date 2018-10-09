@@ -1,0 +1,18 @@
+.class-detail-custom-popover {
+  background-color: #fff;
+  border-radius: 4px;
+  .menu-ul {
+    .menu-li {
+      .button-area {
+        height: 34px;
+        line-height: 34px;
+        padding: 0 16px;
+        cursor: pointer;
+        &:hover {
+          background-color: #F2F7FF;
+          color: #5A8BFF;
+        }
+      }
+    }
+  }
+}
