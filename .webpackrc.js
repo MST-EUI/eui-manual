@@ -1,7 +1,7 @@
 module.exports = {
     devtool: 'cheap-module-eval-source-map',
     output: {
-        publicPath: '/ewtbend/bend/index/',
+        publicPath: '/',
     },
     dev: {
         output: {
@@ -52,7 +52,7 @@ module.exports = {
     },
     host: 'local.mistong.com',
     // host: '172.16.72.197' // use your host ip if try to debug with virtual box
-    port: 8080,
+    port: 9090,
     open: true,
     inline: true,
     autoPort:false

@@ -1,8 +1,5 @@
 import React from 'react';
 import i18n from '~/common/i18n';
-import {
-  Menu,
-} from 'antd';
 import api from '~/service';
 import {
   Link,
@@ -10,8 +7,6 @@ import {
 
 import './style.scss';
 import utils from '../../common/utils';
-
-const SubMenu = Menu.SubMenu;
 
 export default class TopNav extends React.Component {
   constructor(props) {
@@ -56,54 +51,6 @@ export default class TopNav extends React.Component {
     return data.map(item => <li key={item.url} className="user-sub-li"><a href={item.url} rel="noopener noreferrer" target={item.target || ''} >{item.text}</a></li>);
   }
 
-  renderMenus = () => {
-    const self = this;
-    const {
-      menus,
-    } = self.state;
-    const renderItemEle = (item) => {
-      const {
-        id,
-        title,
-        routetype: type,
-        url,
-        target,
-        children,
-      } = item;
-      let itemHtmlEle = null;
-      switch (Number(type)) {
-        case 2:
-          // react-router
-          itemHtmlEle = <Link to={url}>{title}</Link>;
-          break;
-        case 1:
-          // normal url
-          itemHtmlEle = <a target={target || '_blank'} href={url}>{title}</a>;
-          break;
-        default:
-          itemHtmlEle = <span>{title}</span>;
-      }
-      if (children && children.length) {
-        return (
-          <SubMenu key={id} title={<span className="submenu-span">{itemHtmlEle}<i className="icon iconfont icon-triangle-down" /></span>}>
-            {children.map(renderItemEle)}
-          </SubMenu>
-        );
-      }
-      return (
-        <Menu.Item key={id}>
-          {itemHtmlEle}
-        </Menu.Item>
-      );
-    };
-    const menuEles = menus.map(renderItemEle);
-    return (
-      <Menu mode="horizontal">
-        {menuEles}
-      </Menu>
-    );
-  }
-
   render() {
     const self = this;
     const {
@@ -118,9 +65,6 @@ export default class TopNav extends React.Component {
         <div className="logo">
           <span className="dot">·</span>
           <span className="role-title">{role === 'student' ? i18n('studentEnd') : i18n('teacherEnd')}</span>
-        </div>
-        <div className="dynamic-nav-menus">
-          {self.renderMenus()}
         </div>
         <div className="nav-list">
           <ul className="nav-ul">
