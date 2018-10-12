@@ -3,6 +3,7 @@ import { Router, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 // 不需要动态加载的必须组件
 import BasicLayout from '~/layouts/BasicLayout';
+import GetStarted from '~/routes/GetStarted';
 // Style import;
 import '~/common/style/common.scss';
 
@@ -31,6 +32,9 @@ export const createRoutes = (store) => {
   const basicLayoutRoutes = {
     path: '/',
     component: BasicLayout,
+    indexRoute: {
+      component: GetStarted,
+    },
     childRoutes: basicLayoutChildRoutes,
   };
 

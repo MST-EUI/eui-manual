@@ -10,13 +10,13 @@
     "dev:mock": "cross-env PROXY_ENV=mock webpack-guardian dev",
     "dev:pre": "cross-env PROXY_ENV=dev webpack-guardian dev",
     "dev:prod": "cross-env PROXY_ENV=dev webpack-guardian dev",
-    "build": "webpack-guardian build",
-    "bpc": "node src/tools/pc.components.generate.js"
+    "build": "webpack-guardian build && node src/tools/copy.to.eui.site.js",
+    "bpc": "node src/tools/pc.components.generate.js && eslint src/routes/PC/ --fix"
   },
   "author": "mst-team",
   "license": "ISC",
   "dependencies": {
-    "@mistong/eui": "^0.1.9",
+    "@mistong/eui": "^0.1.13",
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
     "console-polyfill": "^0.3.0",

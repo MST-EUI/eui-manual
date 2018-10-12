@@ -28,41 +28,10 @@ class TopNavContainer extends Component {
     };
   }
 
-  componentDidUpdate() {
-    const { data: { role }, dispatch } = this.props;
-    if (role && role.length && !this.documentTitleUpdate) {
-      const isStudent = role && role.length === 1 && role[0] === 'student';
-      const currentRoleForLeftMenus = isStudent ? 'student' : 'teacher';
-      let documentTitlePrefix = '';
-      if (currentRoleForLeftMenus === 'teacher') {
-        documentTitlePrefix = i18n('teacherEnd');
-        dispatch(Action.getTeacherInfo());
-      } else if (currentRoleForLeftMenus === 'student') {
-        documentTitlePrefix = i18n('studentEnd');
-        dispatch(Action.queryStudentInfo());
-      }
-      this.documentTitleUpdate = true;
-      document.title = `${documentTitlePrefix} - ${document.title}`;
-    }
-  }
-
   render() {
-    const {
-      userInfo,
-      data,
-    } = this.props;
-    const { role, loading } = data;
-    const {
-      studentInfo,
-      teacherInfo,
-    } = userInfo;
-    if (loading) {
-      return null;
-    }
-    const roleToString = role && role.length === 1 && role[0] === 'student' ? 'student' : 'teacher';
-    const user = roleToString === 'teacher' ? teacherInfo : studentInfo;
+    const roleToString = 'student';
     return (
-      <TopNav role={roleToString} user={user} />
+      <TopNav role={roleToString} user={{}} />
     );
   }
 }

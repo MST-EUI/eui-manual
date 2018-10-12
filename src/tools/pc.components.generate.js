@@ -2,7 +2,6 @@ const { copyDir } = require('./utils');
 
 const fs = require('fs');
 const path = require('path');
-const mkdirp = require('mkdirp');
 const rimraf = require('rimraf');
 const chalk = require('chalk');
 
@@ -30,35 +29,6 @@ const recreateJsFile = (filePath, componentName) => {
     fs.writeFileSync(filePath, resultStr);
   }
 };
-const ROUTES_DEMO_CODE = `
-const modules = [];
-((req) => {
-  req.keys().forEach((key) => {
-    const md = req(key).default;
-    md.path = md.path || key.split('/')[2];
-    modules.push(md);
-  });
-})(require.context('./', true, /\.\/modules\/[^/]+\/route.js$/));
-
-const getComponent = (nextState, callback) => {
-  require.ensure([], (require) => {
-    callback(null, require('./').default);
-  }, 'detail');
-};
-
-export default {
-  mid: module.id,
-  getComponent,
-  childRoutes: [
-    ...modules,
-  ],
-};
-`;
-
-// rimraf.sync(TARGET_DIR);
-// log('directory lib is removed');
-// mkdirp.sync(TARGET_DIR);
-// log('directory lib is created');
 
 if (exists(NODE_MODULES_PREFIX)) {
   try {
@@ -67,9 +37,13 @@ if (exists(NODE_MODULES_PREFIX)) {
       if (exists(targetDir)) {
         const isKeepSrcRootDir = false;
         const currentDisDirName = String(item).replace('eui-', '');
+        const componentNewDir = relPath(TARGET_DIR_PREFIX, currentDisDirName);
+        if (exists(componentNewDir)) {
+          rimraf.sync(componentNewDir);
+        }
         copyDir(
           relPath(NODE_MODULES_PREFIX, `${item}/demo`),
-          relPath(TARGET_DIR_PREFIX, currentDisDirName),
+          componentNewDir,
           isKeepSrcRootDir,
         );
         log(chalk.blue(`${item} demo is copied`));

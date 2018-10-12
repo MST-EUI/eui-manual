@@ -9,14 +9,15 @@ const modules = [];
 
 const getComponent = (nextState, callback) => {
   require.ensure([], (require) => {
-    callback(null, require('./').default);
-  }, 'management');
+    callback(null, require('.').default);
+  }, 'getstarted');
 };
 
-export default {
+export default store => ({
   mid: module.id,
+  path: 'getstarted',
   getComponent,
   childRoutes: [
     ...modules,
   ],
-};
+});

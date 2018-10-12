@@ -3,7 +3,7 @@ import './style.scss';
 
 const { Component, PropTypes } = React;
 
-export default class Classes extends Component {
+export default class Pc extends Component {
   static propTypes = {
     children: PropTypes.node,
   };

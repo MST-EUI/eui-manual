@@ -73,6 +73,10 @@ const generateMenus = (data = [], role, currentRoute) => {
     } else {
       children = null;
     }
+    if (id === 1) {
+      // Components always unfold
+      unfold = true;
+    }
     return {
       ...item,
       id,

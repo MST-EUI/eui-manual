@@ -1,7 +1,7 @@
 module.exports = {
     devtool: 'cheap-module-eval-source-map',
     output: {
-        publicPath: '/',
+        publicPath: '/eui-site/',
     },
     dev: {
         output: {

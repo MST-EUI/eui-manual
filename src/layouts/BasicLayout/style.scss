@@ -17,7 +17,9 @@
   .top-nav-container {
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 1001;
+    box-shadow: 0px 0px 8px 0px rgba(90, 139, 255, 0.12);
+    background-color: #fff;
   }
   .content-container {
     padding-top: 60px;

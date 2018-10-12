@@ -69,13 +69,13 @@ render() {
         <Code sourceCode={iconAllCode} buttonText="全部图标">
           <ul className="icon-all">
             {
-            iconArr.map(item => (
-              <li className="demo-li" key={item}>
-                <Icon type={item} />
-                <span className="icon-name">{item}</span>
-              </li>
-            ))
-          }
+              iconArr.map(item => (
+                <li className="demo-li" key={item}>
+                  <Icon type={item} />
+                  <span className="icon-name">{item}</span>
+                </li>
+              ))
+            }
           </ul>
         </Code>
         <h3>API</h3>
@@ -128,6 +128,4 @@ render() {
   }
 }
 /* placeholder end class */
-
-
 
