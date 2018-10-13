@@ -37,7 +37,7 @@ $containerHeight: 60px;
         border: 1px solid #fff;
         border-radius: 50%;
         cursor: pointer;
-        color: #fff;
+        color: #333;
       }
       .avatar-img {
         display: inline-block;
@@ -88,7 +88,7 @@ $containerHeight: 60px;
       .nav-li {
         display: inline-block;
         & > a {
-          color: #fff;
+          color: #333;
           height: $containerHeight;
           line-height: $containerHeight;
           display: inline-block;

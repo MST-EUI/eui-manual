@@ -21,11 +21,24 @@ export default class TopNav extends React.Component {
     const self = this;
   }
 
+  renderNavList = () => {
+    const data = [
+      { text: 'PC', url: '/#', target: '_self' },
+      { text: 'Android', url: 'https://mst-eui.github.io/eui-android/', target: '_self' },
+      { text: 'IOS', url: 'https://mst-eui.github.io/eui-ios/', target: '_self' },
+    ];
+    return data.map(item => <li key={item.url} className="nav-li"><a href={item.url} rel="noopener noreferrer" target={item.target || ''} >{item.text}</a></li>);
+  }
+
   render() {
+    const self = this;
     return (
       <div className="top-nav">
         <div className="logo" />
         <div className="nav-list">
+          <ul className="nav-ul">
+            {self.renderNavList()}
+          </ul>
           <div className="user-info">
             <a href="https://github.com/MST-EUI" className="avatar-img"><img alt="avatar" src={githubImg} /></a>
           </div>
