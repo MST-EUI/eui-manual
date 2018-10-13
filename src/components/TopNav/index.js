@@ -23,7 +23,7 @@ export default class TopNav extends React.Component {
 
   renderNavList = () => {
     const data = [
-      { text: 'PC', url: '/#', target: '_self' },
+      { text: 'PC', url: 'https://mst-eui.github.io/eui-site/#/', target: '_self' },
       { text: 'Android', url: 'https://mst-eui.github.io/eui-android/', target: '_self' },
       { text: 'IOS', url: 'https://mst-eui.github.io/eui-ios/', target: '_self' },
     ];

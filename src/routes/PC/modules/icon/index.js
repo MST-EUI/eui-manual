@@ -4,8 +4,14 @@
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Code } from '@mistong/eui';
+import {
+  Code,
+  Demo,
+} from '@mistong/eui';
+
+/* placeholder begin eui style */
 import '@mistong/eui/dist/index.css';
+/* placeholder end eui style */
 
 /* placeholder begin src */
 import Icon from '@mistong/eui-icon';
@@ -13,7 +19,7 @@ import Icon from '@mistong/eui-icon';
 
 import './index.scss';
 
-export default class Demo extends React.Component {
+export default class DemoComponent extends React.Component {
   render() {
     const sourceCode = `
 import { Icon } from '@mistong/eui';
@@ -59,7 +65,7 @@ render() {
       'triangle-up',
     ];
     return (
-      <div className="demo eui-demo">
+      <Demo className="eui-icon-demo">
         <h2>Icon 图标组件</h2>
         <p>语义化的图标库。</p>
         <h3>代码演示</h3>
@@ -67,19 +73,19 @@ render() {
           <Icon type="info" style={{ color: '#f60', fontSize: '30px' }} />
         </Code>
         <Code sourceCode={iconAllCode} buttonText="全部图标">
-          <ul className="icon-all">
+          <div className="icon-all">
             {
               iconArr.map(item => (
-                <li className="demo-li" key={item}>
+                <div className="demo-li" key={item}>
                   <Icon type={item} />
                   <span className="icon-name">{item}</span>
-                </li>
+                </div>
               ))
             }
-          </ul>
+          </div>
         </Code>
         <h3>API</h3>
-        <table className="demo-table">
+        <table>
           <thead>
             <tr>
               <th>参数</th>
@@ -109,21 +115,14 @@ render() {
             </tr>
             <tr>
               <td>type</td>
-              <td>图标类型 (&nbsp;<code>info</code>&nbsp;
-                <code>warning</code>&nbsp;
-                <code>success</code>&nbsp;
-                <code>arrow-right</code>&nbsp;
-                <code>close</code>&nbsp;
-                <code>error</code>&nbsp;
-                <code>triangle-down</code>&nbsp;
-                <code>triangle-up</code>&nbsp;)
+              <td>图标类型 (<Code mode="inline">info</Code><Code mode="inline">success</Code>等)
               </td>
               <td>string</td>
               <td>-</td>
             </tr>
           </tbody>
         </table>
-      </div>
+      </Demo>
     );
   }
 }
