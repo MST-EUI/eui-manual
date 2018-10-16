@@ -27,4 +27,5 @@ export default {
   'empty-data': 'EmptyData 空数据',
   code: 'Code 源码展示',
   demo: 'Demo 组件示例容器',
+  button: 'Button 按钮',
 };

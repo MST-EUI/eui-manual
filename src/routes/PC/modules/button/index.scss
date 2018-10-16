@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.eui-button-demo {
+  .eui-button{
+    &:first-child {
+      margin-left: 0;
+    }
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .eui-button-icon-alarm{
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAMAAABYi/ZGAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA5UExURUxpcUiZ0EiZ0EiZ0EiZ0EiZ0EiZ0EiZ0EiZ0EiZ0EiZ0EiZ0EiZ0EiZ0EiZ0EiZ0EiZ0EiZ0EiZ0L5v0m8AAAASdFJOUwBGu2XUgq1yV/XKDjGe3O2SIPwyCUAAAAC5SURBVBjTTZBbFoQgDEPDGwQFs//FTkudcfJRe241jQUQPYA+xujyPKMUHHSoB1WxwlHg5BDMM9SwmoCbDdmBDDBVsg+1arzx06RWL6g/JJfOAxhMMt3bZFxQxD/ry0Gn0qovPdpl5te8bNVBcJkTM/3ulrCEZzrn7pKw/E32pDyJq1kMl5w1Asp/Yj2Gmu0YrzzlB4oEfRVs5/qDheeznNH8nR7NUhSn9/RRqqv726Lxa25suWq8hA8I3wh0NEtllgAAAABJRU5ErkJggg==) no-repeat center center;
+    width:20px;height:20px;
+  }
+}

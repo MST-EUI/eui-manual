@@ -16,7 +16,7 @@
   "author": "mst-team",
   "license": "ISC",
   "dependencies": {
-    "@mistong/eui": "^0.1.14",
+    "@mistong/eui": "^0.1.17",
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
     "console-polyfill": "^0.3.0",
