@@ -1,0 +1,24 @@
+.eui-tab-demo {
+    color: #333;
+    font-size: 16px;
+    @mixin demo {
+        width: 600px;
+        padding: 20px 10px;
+        border: 1px solid #eee;
+        margin-bottom: 20px;
+    }
+    .demo1,
+    .demo2,
+    .demo3,
+    .demo4,
+    .demo5,
+    .demo6 {
+        @include demo;
+    }
+    .test {
+        &::before {
+            content: '\e640';
+        }
+    }
+    .desc {}
+}

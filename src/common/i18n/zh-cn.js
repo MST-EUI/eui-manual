@@ -28,4 +28,6 @@ export default {
   code: 'Code 源码展示',
   demo: 'Demo 组件示例容器',
   button: 'Button 按钮',
+  dialog: 'Dialog 对话框',
+  tab: 'Tab 选项卡',
 };
