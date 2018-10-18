@@ -31,4 +31,5 @@ export default {
   dialog: 'Dialog 对话框',
   tab: 'Tab 选项卡',
   popover: 'Popover 弹层',
+  pagination: 'Pagination 分页',
 };
